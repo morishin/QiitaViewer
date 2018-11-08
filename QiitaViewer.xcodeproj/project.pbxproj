@@ -10,13 +10,19 @@
 		5B3FA82521919F5900C45F6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3FA82421919F5900C45F6D /* AppDelegate.swift */; };
 		5B3FA82C21919F5A00C45F6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B3FA82B21919F5A00C45F6D /* Assets.xcassets */; };
 		5B3FA82F21919F5A00C45F6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B3FA82D21919F5A00C45F6D /* LaunchScreen.storyboard */; };
-		5B6500392193C9CF007D55F1 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B6500372193C9CF007D55F1 /* MainViewController.xib */; };
-		5B65003A2193C9CF007D55F1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6500382193C9CF007D55F1 /* MainViewController.swift */; };
 		5B6500402193CEA4007D55F1 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B65003F2193CEA4007D55F1 /* Environment.swift */; };
 		5B6500422193CEC0007D55F1 /* EnvironmentProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6500412193CEC0007D55F1 /* EnvironmentProvider.swift */; };
 		5B6500452193D214007D55F1 /* PostEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6500442193D214007D55F1 /* PostEntity.swift */; };
 		5B6500472193D295007D55F1 /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6500462193D295007D55F1 /* UserEntity.swift */; };
 		5BC5550D2193DACB00416F7E /* GetPostsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC5550C2193DACB00416F7E /* GetPostsRequest.swift */; };
+		5BC5551121941D4400416F7E /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC5550F21941D4400416F7E /* PostsViewController.swift */; };
+		5BC5551221941D4400416F7E /* PostsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BC5551021941D4400416F7E /* PostsViewController.xib */; };
+		5BC55515219420DC00416F7E /* PostCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC55513219420DC00416F7E /* PostCellViewController.swift */; };
+		5BC55516219420DC00416F7E /* PostCellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BC55514219420DC00416F7E /* PostCellViewController.xib */; };
+		5BC5551A2194234A00416F7E /* UserIconImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC555192194234A00416F7E /* UserIconImageView.swift */; };
+		5BC555262194796800416F7E /* PostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC555252194796800416F7E /* PostsViewModel.swift */; };
+		5BC5552D219495CF00416F7E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC5552B219495CF00416F7E /* MainViewController.swift */; };
+		5BC5552E219495CF00416F7E /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BC5552C219495CF00416F7E /* MainViewController.xib */; };
 		E92663578C9FCAEE8121F427 /* Pods_QiitaViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98D4B74AEBE02A861EB14F26 /* Pods_QiitaViewer.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,13 +33,19 @@
 		5B3FA82B21919F5A00C45F6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B3FA82E21919F5A00C45F6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B3FA83021919F5A00C45F6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5B6500372193C9CF007D55F1 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
-		5B6500382193C9CF007D55F1 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		5B65003F2193CEA4007D55F1 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		5B6500412193CEC0007D55F1 /* EnvironmentProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentProvider.swift; sourceTree = "<group>"; };
 		5B6500442193D214007D55F1 /* PostEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostEntity.swift; sourceTree = "<group>"; };
 		5B6500462193D295007D55F1 /* UserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
 		5BC5550C2193DACB00416F7E /* GetPostsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPostsRequest.swift; sourceTree = "<group>"; };
+		5BC5550F21941D4400416F7E /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
+		5BC5551021941D4400416F7E /* PostsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostsViewController.xib; sourceTree = "<group>"; };
+		5BC55513219420DC00416F7E /* PostCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCellViewController.swift; sourceTree = "<group>"; };
+		5BC55514219420DC00416F7E /* PostCellViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCellViewController.xib; sourceTree = "<group>"; };
+		5BC555192194234A00416F7E /* UserIconImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserIconImageView.swift; sourceTree = "<group>"; };
+		5BC555252194796800416F7E /* PostsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewModel.swift; sourceTree = "<group>"; };
+		5BC5552B219495CF00416F7E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		5BC5552C219495CF00416F7E /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		6456385830B45E21CD6478B9 /* Pods-QiitaViewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QiitaViewer.release.xcconfig"; path = "Pods/Target Support Files/Pods-QiitaViewer/Pods-QiitaViewer.release.xcconfig"; sourceTree = "<group>"; };
 		98D4B74AEBE02A861EB14F26 /* Pods_QiitaViewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QiitaViewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -93,6 +105,7 @@
 				5B6500432193D1FF007D55F1 /* Entity */,
 				5B65003E2193CE94007D55F1 /* Environment */,
 				5B6500362193C9CF007D55F1 /* Main */,
+				5BC5550E21941D2700416F7E /* Posts */,
 				5B3FA82B21919F5A00C45F6D /* Assets.xcassets */,
 				5B3FA82D21919F5A00C45F6D /* LaunchScreen.storyboard */,
 				5B3FA83021919F5A00C45F6D /* Info.plist */,
@@ -103,8 +116,8 @@
 		5B6500362193C9CF007D55F1 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				5B6500372193C9CF007D55F1 /* MainViewController.xib */,
-				5B6500382193C9CF007D55F1 /* MainViewController.swift */,
+				5BC5552B219495CF00416F7E /* MainViewController.swift */,
+				5BC5552C219495CF00416F7E /* MainViewController.xib */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -133,6 +146,19 @@
 				5BC5550C2193DACB00416F7E /* GetPostsRequest.swift */,
 			);
 			path = "API Request";
+			sourceTree = "<group>";
+		};
+		5BC5550E21941D2700416F7E /* Posts */ = {
+			isa = PBXGroup;
+			children = (
+				5BC555252194796800416F7E /* PostsViewModel.swift */,
+				5BC5550F21941D4400416F7E /* PostsViewController.swift */,
+				5BC5551021941D4400416F7E /* PostsViewController.xib */,
+				5BC55513219420DC00416F7E /* PostCellViewController.swift */,
+				5BC55514219420DC00416F7E /* PostCellViewController.xib */,
+				5BC555192194234A00416F7E /* UserIconImageView.swift */,
+			);
+			path = Posts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,8 +221,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BC5551221941D4400416F7E /* PostsViewController.xib in Resources */,
 				5B3FA82F21919F5A00C45F6D /* LaunchScreen.storyboard in Resources */,
-				5B6500392193C9CF007D55F1 /* MainViewController.xib in Resources */,
+				5BC5552E219495CF00416F7E /* MainViewController.xib in Resources */,
+				5BC55516219420DC00416F7E /* PostCellViewController.xib in Resources */,
 				5B3FA82C21919F5A00C45F6D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,6 +244,7 @@
 				"${BUILT_PRODUCTS_DIR}/APIKit/APIKit.framework",
 				"${BUILT_PRODUCTS_DIR}/HydraAsync/Hydra.framework",
 				"${BUILT_PRODUCTS_DIR}/Mew/Mew.framework",
+				"${BUILT_PRODUCTS_DIR}/Nuke/Nuke.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -225,6 +254,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/APIKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hydra.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mew.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nuke.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,13 +291,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BC5551A2194234A00416F7E /* UserIconImageView.swift in Sources */,
+				5BC5552D219495CF00416F7E /* MainViewController.swift in Sources */,
 				5B6500422193CEC0007D55F1 /* EnvironmentProvider.swift in Sources */,
 				5BC5550D2193DACB00416F7E /* GetPostsRequest.swift in Sources */,
 				5B6500472193D295007D55F1 /* UserEntity.swift in Sources */,
 				5B3FA82521919F5900C45F6D /* AppDelegate.swift in Sources */,
+				5BC5551121941D4400416F7E /* PostsViewController.swift in Sources */,
 				5B6500402193CEA4007D55F1 /* Environment.swift in Sources */,
+				5BC555262194796800416F7E /* PostsViewModel.swift in Sources */,
+				5BC55515219420DC00416F7E /* PostCellViewController.swift in Sources */,
 				5B6500452193D214007D55F1 /* PostEntity.swift in Sources */,
-				5B65003A2193C9CF007D55F1 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,4 +9,5 @@ target 'QiitaViewer' do
   pod 'Mew', :git => 'https://github.com/mercari/Mew.git'
   pod 'HydraAsync'
   pod 'APIKit'
+  pod 'Nuke'
 end

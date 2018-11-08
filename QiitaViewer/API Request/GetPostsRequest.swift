@@ -9,9 +9,11 @@ struct GetPostsRequest: Request {
     var path: String = "/items"
 
     func response(from object: Any, urlResponse: HTTPURLResponse) throws -> [PostEntity] {
-        guard let data = object as? Data else {
+        guard let postsDictionary = object as? [[String: AnyObject]],
+            let postsJSON = try? JSONSerialization.data(withJSONObject: postsDictionary)
+        else {
             throw ResponseError.unexpectedObject(object)
         }
-        return try JSONDecoder().decode(Response.self, from: data)
+        return try JSONDecoder().decode(Response.self, from: postsJSON)
     }
 }
