@@ -1,0 +1,36 @@
+PODS:
+  - APIKit (4.0.0):
+    - Result (~> 4.0)
+  - HydraAsync (1.2.1)
+  - Mew (0.1.0)
+  - Result (4.0.0)
+
+DEPENDENCIES:
+  - APIKit
+  - HydraAsync
+  - Mew (from `https://github.com/mercari/Mew.git`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - APIKit
+    - HydraAsync
+    - Result
+
+EXTERNAL SOURCES:
+  Mew:
+    :git: https://github.com/mercari/Mew.git
+
+CHECKOUT OPTIONS:
+  Mew:
+    :commit: dd27b41c15156b9ffa1bd29ae3ee842979610849
+    :git: https://github.com/mercari/Mew.git
+
+SPEC CHECKSUMS:
+  APIKit: 23ddce4be7eccd746d2ab3c62713cd80d5846d5a
+  HydraAsync: 8f2ab62d57e140b4ca587ae0f66e1eb04e8e6965
+  Mew: aea94158daf170b2b49a58f2458e2960de06ce01
+  Result: 7645bb3f50c2ce726dd0ff2fa7b6f42bbe6c3713
+
+PODFILE CHECKSUM: 2a858d905d20f7d0bbccae3caad42278aba23a93
+
+COCOAPODS: 1.5.3
