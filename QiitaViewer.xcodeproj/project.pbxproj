@@ -11,6 +11,8 @@
 		5B3FA82C21919F5A00C45F6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B3FA82B21919F5A00C45F6D /* Assets.xcassets */; };
 		5B3FA82F21919F5A00C45F6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B3FA82D21919F5A00C45F6D /* LaunchScreen.storyboard */; };
 		5B54BFA62195347100A1FEA7 /* Date+TimeAgoDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B54BFA52195347100A1FEA7 /* Date+TimeAgoDisplay.swift */; };
+		5B54BFA92195382100A1FEA7 /* LoadingCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B54BFA72195382100A1FEA7 /* LoadingCellViewController.swift */; };
+		5B54BFAA2195382100A1FEA7 /* LoadingCellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B54BFA82195382100A1FEA7 /* LoadingCellViewController.xib */; };
 		5B6500402193CEA4007D55F1 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B65003F2193CEA4007D55F1 /* Environment.swift */; };
 		5B6500422193CEC0007D55F1 /* EnvironmentProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6500412193CEC0007D55F1 /* EnvironmentProvider.swift */; };
 		5B6500452193D214007D55F1 /* PostEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6500442193D214007D55F1 /* PostEntity.swift */; };
@@ -35,6 +37,8 @@
 		5B3FA82E21919F5A00C45F6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B3FA83021919F5A00C45F6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B54BFA52195347100A1FEA7 /* Date+TimeAgoDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+TimeAgoDisplay.swift"; sourceTree = "<group>"; };
+		5B54BFA72195382100A1FEA7 /* LoadingCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCellViewController.swift; sourceTree = "<group>"; };
+		5B54BFA82195382100A1FEA7 /* LoadingCellViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCellViewController.xib; sourceTree = "<group>"; };
 		5B65003F2193CEA4007D55F1 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		5B6500412193CEC0007D55F1 /* EnvironmentProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentProvider.swift; sourceTree = "<group>"; };
 		5B6500442193D214007D55F1 /* PostEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostEntity.swift; sourceTree = "<group>"; };
@@ -167,6 +171,8 @@
 				5BC5551021941D4400416F7E /* PostsViewController.xib */,
 				5BC55513219420DC00416F7E /* PostCellViewController.swift */,
 				5BC55514219420DC00416F7E /* PostCellViewController.xib */,
+				5B54BFA72195382100A1FEA7 /* LoadingCellViewController.swift */,
+				5B54BFA82195382100A1FEA7 /* LoadingCellViewController.xib */,
 				5BC555192194234A00416F7E /* UserIconImageView.swift */,
 			);
 			path = Posts;
@@ -233,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BC5551221941D4400416F7E /* PostsViewController.xib in Resources */,
+				5B54BFAA2195382100A1FEA7 /* LoadingCellViewController.xib in Resources */,
 				5B3FA82F21919F5A00C45F6D /* LaunchScreen.storyboard in Resources */,
 				5BC5552E219495CF00416F7E /* MainViewController.xib in Resources */,
 				5BC55516219420DC00416F7E /* PostCellViewController.xib in Resources */,
@@ -308,6 +315,7 @@
 				5BC5552D219495CF00416F7E /* MainViewController.swift in Sources */,
 				5B6500422193CEC0007D55F1 /* EnvironmentProvider.swift in Sources */,
 				5BC5550D2193DACB00416F7E /* GetPostsRequest.swift in Sources */,
+				5B54BFA92195382100A1FEA7 /* LoadingCellViewController.swift in Sources */,
 				5B6500472193D295007D55F1 /* UserEntity.swift in Sources */,
 				5B3FA82521919F5900C45F6D /* AppDelegate.swift in Sources */,
 				5BC5551121941D4400416F7E /* PostsViewController.swift in Sources */,

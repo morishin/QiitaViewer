@@ -9,7 +9,18 @@ class PostsViewController: UIViewController, Instantiatable, Injectable, UITable
     private var viewModel: PostsViewModel!
     private var posts: [PostEntity] {
         didSet {
-            tableView.reloadData()
+            if posts.elementsEqual(oldValue, by: { l, r -> Bool in
+                return l.id == r.id
+            }) {
+                tableView.reloadData()
+            }
+        }
+    }
+    private var isLoading: Bool {
+        didSet {
+            if isLoading != oldValue {
+                tableView.reloadData()
+            }
         }
     }
 
@@ -18,6 +29,7 @@ class PostsViewController: UIViewController, Instantiatable, Injectable, UITable
     required init(with input: Input, environment: Environment) {
         self.environment = environment
         self.posts = input.posts
+        self.isLoading = input.isLoading
         super.init(nibName: nil, bundle: nil)
         self.viewModel = PostsViewModel(view: self, input: input, environment: environment)
     }
@@ -29,6 +41,7 @@ class PostsViewController: UIViewController, Instantiatable, Injectable, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         TableViewCell<PostCellViewController>.register(to: tableView)
+        TableViewCell<LoadingCellViewController>.register(to: tableView)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -40,29 +53,58 @@ class PostsViewController: UIViewController, Instantiatable, Injectable, UITable
 
     func input(_ input: Input) {
         posts = input.posts
+        isLoading = input.isLoading
     }
 
     // MARK: - UITableViewDelegate / UITableViewDataSource
 
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 140
+        if indexPath.section == 0 {
+            return 140
+        } else {
+            return 50
+        }
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return posts.count
+        if section == 0 {
+            return posts.count
+        } else {
+            return isLoading ? 1 : 0
+        }
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let post = posts[indexPath.row]
-        return TableViewCell<PostCellViewController>.dequeued(
-            from: tableView,
-            for: indexPath,
-            input: PostCellViewController.Input(
-                title: post.title,
-                userName: post.user.id,
-                userIconImageURL: post.user.profileImageURL,
-                createdDateAgo: post.createdDate.timeAgoDisplay()
-            ),
-            parentViewController: self)
+        if indexPath.section == 0 {
+            let post = posts[indexPath.row]
+            return TableViewCell<PostCellViewController>.dequeued(
+                from: tableView,
+                for: indexPath,
+                input: PostCellViewController.Input(
+                    title: post.title,
+                    userName: post.user.id,
+                    userIconImageURL: post.user.profileImageURL,
+                    createdDateAgo: post.createdDate.timeAgoDisplay()
+                ),
+                parentViewController: self)
+        } else {
+            return TableViewCell<LoadingCellViewController>.dequeued(
+                from: tableView,
+                for: indexPath,
+                input: (),
+                parentViewController: self)
+        }
+    }
+
+    // MARK - UIScrollViewDelegate
+
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView.contentOffset.y > (scrollView.contentSize.height - scrollView.frame.size.height) {
+            viewModel.loadMore()
+        }
     }
 }

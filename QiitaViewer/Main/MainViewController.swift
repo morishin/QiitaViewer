@@ -18,7 +18,7 @@ class MainViewController: UIViewController, Instantiatable {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        postsViewContainer = self.containerView.makeContainer(for: PostsViewController.self, parentViewController: self, with: PostsViewController.Input(posts: []))
+        postsViewContainer = self.containerView.makeContainer(for: PostsViewController.self, parentViewController: self, with: PostsViewController.Input(posts: [], nextPage: 1, isLoading: false))
     }
 
     required init?(coder aDecoder: NSCoder) {
