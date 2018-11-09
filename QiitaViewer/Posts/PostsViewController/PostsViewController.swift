@@ -90,7 +90,8 @@ class PostsViewController: UIViewController, Instantiatable, Injectable, UITable
                     title: post.title,
                     userName: post.user.id,
                     userIconImageURL: post.user.profileImageURL,
-                    createdDateAgo: post.createdDate.timeAgoDisplay()),
+                    createdDateAgo: post.createdDate.timeAgoDisplay(),
+                    likesCount: post.likesCount),
                 parentViewController: self)
         } else {
             return TableViewCell<LoadingCellViewController>.dequeued(

@@ -9,6 +9,7 @@ class PostCellViewController: UIViewController, Instantiatable, Injectable {
         var userName: String
         var userIconImageURL: URL?
         var createdDateAgo: String
+        var likesCount: Int
     }
 
     let environment: Environment
@@ -22,6 +23,7 @@ class PostCellViewController: UIViewController, Instantiatable, Injectable {
     @IBOutlet private var userNameLabel: UILabel!
     @IBOutlet private var userIconImageView: UserIconImageView!
     @IBOutlet private var createdDateLabel: UILabel!
+    @IBOutlet private weak var likesCountLabel: UILabel!
 
     required init(with input: Input, environment: Environment) {
         self.environment = environment
@@ -43,6 +45,7 @@ class PostCellViewController: UIViewController, Instantiatable, Injectable {
         userNameLabel.text = "by @\(model.userName)"
         userIconImageView.imageURL = model.userIconImageURL
         createdDateLabel.text = model.createdDateAgo
+        likesCountLabel.text = "\(model.likesCount)"
     }
 
     // MARK: - Injectable
