@@ -6,12 +6,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PostCellViewController" customModule="QiitaViewer" customModuleProvider="target">
             <connections>
+                <outlet property="createdDateLabel" destination="8b3-WU-fkg" id="WYL-6t-Rlc"/>
                 <outlet property="titleLabel" destination="65M-kB-DRr" id="Be3-pc-43B"/>
                 <outlet property="userIconImageView" destination="I7c-rv-gmG" id="JEF-Vg-xp8"/>
                 <outlet property="userNameLabel" destination="ezM-rw-Ngg" id="M4C-bp-zCj"/>
@@ -20,12 +22,18 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="436" height="172"/>
+            <rect key="frame" x="0.0" y="0.0" width="436" height="140"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I7c-rv-gmG" customClass="UserIconImageView" customModule="QiitaViewer" customModuleProvider="target">
-                    <rect key="frame" x="15" y="114" width="48" height="48"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="【AWS Lambda】Amazon Linux の Docker イメージを使ってデプロイパッケージを作成する" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="65M-kB-DRr">
+                    <rect key="frame" x="15" y="10" width="406" height="53"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                    <color key="textColor" name="BlackText"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I7c-rv-gmG" customClass="UserIconImageView" customModule="QiitaViewer" customModuleProvider="target">
+                    <rect key="frame" x="15" y="82" width="48" height="48"/>
+                    <color key="backgroundColor" name="LightGray"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="48" id="PxQ-Qu-HMB"/>
                         <constraint firstAttribute="width" constant="48" id="pda-GV-3Xn"/>
@@ -36,32 +44,68 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@morisihn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ezM-rw-Ngg">
-                    <rect key="frame" x="73" y="127.5" width="81" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by @morisihn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ezM-rw-Ngg">
+                    <rect key="frame" x="73" y="95.5" width="104" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
+                    <color key="textColor" name="DarkGrayText"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="【AWS Lambda】Amazon Linux の Docker イメージを使ってデプロイパッケージを作成する" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="65M-kB-DRr">
-                    <rect key="frame" x="15" y="10" width="406" height="86"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                    <nil key="textColor"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 day ago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8b3-WU-fkg">
+                    <rect key="frame" x="187" y="95.5" width="73" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" name="DarkGrayText"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xfh-q8-SqL" customClass="FontAwesomeView" customModule="FontAwesome_swift">
+                    <rect key="frame" x="367.5" y="96" width="20" height="20"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="tintColor" name="LightGray"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="2zt-y9-PAw"/>
+                        <constraint firstAttribute="width" constant="20" id="e4K-9l-yQ3"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="rdS-cW-gwz"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="iconCode" value="fa-thumbs-up"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Su-Ir-qej">
+                    <rect key="frame" x="392.5" y="95.5" width="28.5" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" name="DarkGrayText"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="I7c-rv-gmG" secondAttribute="bottom" constant="10" id="Cf9-E8-nwA"/>
+                <constraint firstItem="8Su-Ir-qej" firstAttribute="leading" secondItem="Xfh-q8-SqL" secondAttribute="trailing" constant="5" id="1Di-e9-RoG"/>
+                <constraint firstItem="I7c-rv-gmG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="3ya-cP-gqc"/>
+                <constraint firstItem="8Su-Ir-qej" firstAttribute="centerY" secondItem="Xfh-q8-SqL" secondAttribute="centerY" id="93H-99-3ih"/>
                 <constraint firstItem="65M-kB-DRr" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="JTE-Ck-iAL"/>
+                <constraint firstItem="ezM-rw-Ngg" firstAttribute="centerY" secondItem="I7c-rv-gmG" secondAttribute="centerY" id="JvT-ZL-PNv"/>
+                <constraint firstItem="ezM-rw-Ngg" firstAttribute="leading" secondItem="I7c-rv-gmG" secondAttribute="trailing" constant="10" id="L6g-lN-aGf"/>
+                <constraint firstItem="8Su-Ir-qej" firstAttribute="firstBaseline" secondItem="8b3-WU-fkg" secondAttribute="firstBaseline" id="Ljl-Ur-ZcP"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="65M-kB-DRr" secondAttribute="trailing" constant="15" id="QU8-13-8Xd"/>
-                <constraint firstItem="ezM-rw-Ngg" firstAttribute="leading" secondItem="I7c-rv-gmG" secondAttribute="trailing" constant="10" id="QdL-RS-uXF"/>
-                <constraint firstItem="ezM-rw-Ngg" firstAttribute="centerY" secondItem="I7c-rv-gmG" secondAttribute="centerY" id="b9X-V0-FzU"/>
-                <constraint firstItem="I7c-rv-gmG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="kVX-ly-ECS"/>
+                <constraint firstItem="8b3-WU-fkg" firstAttribute="firstBaseline" secondItem="ezM-rw-Ngg" secondAttribute="firstBaseline" id="Qc3-xw-DxM"/>
+                <constraint firstItem="8b3-WU-fkg" firstAttribute="leading" secondItem="ezM-rw-Ngg" secondAttribute="trailing" constant="10" id="SoV-d6-ci9"/>
                 <constraint firstItem="65M-kB-DRr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="mPq-Mn-eil"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="I7c-rv-gmG" secondAttribute="bottom" constant="10" id="nFK-Pa-R1f"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="8Su-Ir-qej" secondAttribute="trailing" constant="15" id="v6h-2C-9Kr"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="102.40000000000001" y="-174.51274362818592"/>
         </view>
     </objects>
+    <resources>
+        <namedColor name="BlackText">
+            <color red="0.13699999451637268" green="0.13699999451637268" blue="0.13699999451637268" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="DarkGrayText">
+            <color red="0.25499999523162842" green="0.25499999523162842" blue="0.25499999523162842" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LightGray">
+            <color red="0.69999998807907104" green="0.69999998807907104" blue="0.69999998807907104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

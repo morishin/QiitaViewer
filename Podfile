@@ -10,4 +10,6 @@ target 'QiitaViewer' do
   pod 'HydraAsync'
   pod 'APIKit'
   pod 'Nuke'
+  pod 'FontAwesome.swift'
+
 end

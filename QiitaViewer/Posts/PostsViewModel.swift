@@ -7,9 +7,9 @@ class PostsViewModel {
         var posts: [PostEntity]
     }
 
-    weak var view: PostsViewController?
-    let environment: EnvironmentProvider
-    var currentState: Model
+    private weak var view: PostsViewController?
+    private let environment: EnvironmentProvider
+    private var currentState: Model
 
     init(view: PostsViewController, input: PostsViewController.Input, environment: EnvironmentProvider) {
         self.view = view

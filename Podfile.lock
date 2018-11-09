@@ -1,6 +1,7 @@
 PODS:
   - APIKit (4.0.0):
     - Result (~> 4.0)
+  - FontAwesome.swift (1.4.5)
   - HydraAsync (1.2.1)
   - Mew (0.1.0)
   - Nuke (7.5.1)
@@ -8,6 +9,7 @@ PODS:
 
 DEPENDENCIES:
   - APIKit
+  - FontAwesome.swift
   - HydraAsync
   - Mew (from `https://github.com/mercari/Mew.git`)
   - Nuke
@@ -15,6 +17,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - APIKit
+    - FontAwesome.swift
     - HydraAsync
     - Nuke
     - Result
@@ -30,11 +33,12 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   APIKit: 23ddce4be7eccd746d2ab3c62713cd80d5846d5a
+  FontAwesome.swift: a351dbb86b9fcec9aad6bce2fdd5b95e9a7b8828
   HydraAsync: 8f2ab62d57e140b4ca587ae0f66e1eb04e8e6965
   Mew: aea94158daf170b2b49a58f2458e2960de06ce01
   Nuke: 3814db501e55f17951451839c726ffd91641e9a5
   Result: 7645bb3f50c2ce726dd0ff2fa7b6f42bbe6c3713
 
-PODFILE CHECKSUM: 3d1a062898ba93af7ae46bc2474783644880cfed
+PODFILE CHECKSUM: 133a891c8a1ec8643e57b5abd5a1542393c7ea91
 
 COCOAPODS: 1.5.3

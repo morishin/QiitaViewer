@@ -8,6 +8,7 @@ class PostCellViewController: UIViewController, Instantiatable, Injectable {
         var title: String
         var userName: String
         var userIconImageURL: URL?
+        var createdDateAgo: String
     }
 
     let environment: Environment
@@ -20,6 +21,7 @@ class PostCellViewController: UIViewController, Instantiatable, Injectable {
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var userNameLabel: UILabel!
     @IBOutlet private weak var userIconImageView: UserIconImageView!
+    @IBOutlet private weak var createdDateLabel: UILabel!
 
     required init(with input: Input, environment: Environment) {
         self.environment = environment
@@ -36,13 +38,16 @@ class PostCellViewController: UIViewController, Instantiatable, Injectable {
         update()
     }
 
-    func input(_ input: Input) {
-        model = input
-    }
-
     private func update() {
         titleLabel.text = model.title
-        userNameLabel.text = model.userName
+        userNameLabel.text = "by @\(model.userName)"
         userIconImageView.imageURL = model.userIconImageURL
+        createdDateLabel.text = model.createdDateAgo
+    }
+
+    // MARK: - Injectable
+
+    func input(_ input: Input) {
+        model = input
     }
 }

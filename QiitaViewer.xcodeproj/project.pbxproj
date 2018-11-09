@@ -10,6 +10,7 @@
 		5B3FA82521919F5900C45F6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3FA82421919F5900C45F6D /* AppDelegate.swift */; };
 		5B3FA82C21919F5A00C45F6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B3FA82B21919F5A00C45F6D /* Assets.xcassets */; };
 		5B3FA82F21919F5A00C45F6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B3FA82D21919F5A00C45F6D /* LaunchScreen.storyboard */; };
+		5B54BFA62195347100A1FEA7 /* Date+TimeAgoDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B54BFA52195347100A1FEA7 /* Date+TimeAgoDisplay.swift */; };
 		5B6500402193CEA4007D55F1 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B65003F2193CEA4007D55F1 /* Environment.swift */; };
 		5B6500422193CEC0007D55F1 /* EnvironmentProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6500412193CEC0007D55F1 /* EnvironmentProvider.swift */; };
 		5B6500452193D214007D55F1 /* PostEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6500442193D214007D55F1 /* PostEntity.swift */; };
@@ -33,6 +34,7 @@
 		5B3FA82B21919F5A00C45F6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B3FA82E21919F5A00C45F6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B3FA83021919F5A00C45F6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B54BFA52195347100A1FEA7 /* Date+TimeAgoDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+TimeAgoDisplay.swift"; sourceTree = "<group>"; };
 		5B65003F2193CEA4007D55F1 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		5B6500412193CEC0007D55F1 /* EnvironmentProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentProvider.swift; sourceTree = "<group>"; };
 		5B6500442193D214007D55F1 /* PostEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostEntity.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 		5B3FA82321919F5900C45F6D /* QiitaViewer */ = {
 			isa = PBXGroup;
 			children = (
+				5B54BFA42195345200A1FEA7 /* Utility */,
 				5B3FA82421919F5900C45F6D /* AppDelegate.swift */,
 				5BC5550B2193DAA900416F7E /* API Request */,
 				5B6500432193D1FF007D55F1 /* Entity */,
@@ -111,6 +114,14 @@
 				5B3FA83021919F5A00C45F6D /* Info.plist */,
 			);
 			path = QiitaViewer;
+			sourceTree = "<group>";
+		};
+		5B54BFA42195345200A1FEA7 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				5B54BFA52195347100A1FEA7 /* Date+TimeAgoDisplay.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 		5B6500362193C9CF007D55F1 /* Main */ = {
@@ -242,6 +253,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-QiitaViewer/Pods-QiitaViewer-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/APIKit/APIKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FontAwesome.swift/FontAwesome_swift.framework",
 				"${BUILT_PRODUCTS_DIR}/HydraAsync/Hydra.framework",
 				"${BUILT_PRODUCTS_DIR}/Mew/Mew.framework",
 				"${BUILT_PRODUCTS_DIR}/Nuke/Nuke.framework",
@@ -252,6 +264,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/APIKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FontAwesome_swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hydra.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mew.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nuke.framework",
@@ -300,6 +313,7 @@
 				5BC5551121941D4400416F7E /* PostsViewController.swift in Sources */,
 				5B6500402193CEA4007D55F1 /* Environment.swift in Sources */,
 				5BC555262194796800416F7E /* PostsViewModel.swift in Sources */,
+				5B54BFA62195347100A1FEA7 /* Date+TimeAgoDisplay.swift in Sources */,
 				5BC55515219420DC00416F7E /* PostCellViewController.swift in Sources */,
 				5B6500452193D214007D55F1 /* PostEntity.swift in Sources */,
 			);

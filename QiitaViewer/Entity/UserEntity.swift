@@ -2,7 +2,6 @@ import Foundation
 
 struct UserEntity: Codable {
     var id: String
-    var name: String
     var profileImageURL: URL? {
         return URL(string: profile_image_url)
     }

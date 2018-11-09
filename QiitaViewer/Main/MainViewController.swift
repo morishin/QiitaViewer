@@ -7,9 +7,9 @@ class MainViewController: UIViewController, Instantiatable {
 
     var environment: Environment
 
-    @IBOutlet weak var containerView: ContainerView!
+    @IBOutlet private weak var containerView: ContainerView!
 
-    var postsViewContainer: ContainerView.Container<PostsViewController, MainViewController>!
+    private var postsViewContainer: ContainerView.Container<PostsViewController, MainViewController>?
 
     required init(with input: Input, environment: Environment) {
         self.environment = environment

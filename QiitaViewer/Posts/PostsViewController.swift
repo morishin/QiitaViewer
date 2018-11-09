@@ -36,12 +36,16 @@ class PostsViewController: UIViewController, Instantiatable, Injectable, UITable
         viewModel.refresh()
     }
 
+    // MARK: - Injectable
+
     func input(_ input: Input) {
         posts = input.posts
     }
 
+    // MARK: - UITableViewDelegate / UITableViewDataSource
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 172
+        return 140
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -55,8 +59,9 @@ class PostsViewController: UIViewController, Instantiatable, Injectable, UITable
             for: indexPath,
             input: PostCellViewController.Input(
                 title: post.title,
-                userName: post.user.name,
-                userIconImageURL: post.user.profileImageURL
+                userName: post.user.id,
+                userIconImageURL: post.user.profileImageURL,
+                createdDateAgo: post.createdDate.timeAgoDisplay()
             ),
             parentViewController: self)
     }
