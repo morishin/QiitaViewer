@@ -1,5 +1,5 @@
-import UIKit
 import Mew
+import UIKit
 
 class LoadingCellViewController: UIViewController, Instantiatable, Injectable {
     typealias Input = Void
@@ -7,7 +7,7 @@ class LoadingCellViewController: UIViewController, Instantiatable, Injectable {
 
     var environment: EnvironmentProvider
 
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
 
     required init(with input: Void, environment: EnvironmentProvider) {
         self.environment = environment

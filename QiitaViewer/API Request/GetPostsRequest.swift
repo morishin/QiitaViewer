@@ -1,5 +1,5 @@
-import Foundation
 import APIKit
+import Foundation
 
 struct GetPostsRequest: Request {
     typealias Response = [PostEntity]

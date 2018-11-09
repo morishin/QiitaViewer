@@ -1,6 +1,6 @@
 import Foundation
-import Mew
 import Hydra
+import Mew
 
 class PostsViewModel {
     struct Model {
@@ -20,7 +20,7 @@ class PostsViewModel {
     init(view: PostsViewController, input: PostsViewController.Input, environment: EnvironmentProvider) {
         self.view = view
         self.environment = environment
-        self.currentState = input
+        currentState = input
     }
 
     func refresh() {

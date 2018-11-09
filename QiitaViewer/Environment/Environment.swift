@@ -1,5 +1,5 @@
-import Foundation
 import APIKit
+import Foundation
 import Hydra
 
 class Environment: EnvironmentProvider {

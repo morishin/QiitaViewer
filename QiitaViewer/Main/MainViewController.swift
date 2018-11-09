@@ -1,5 +1,5 @@
-import UIKit
 import Mew
+import UIKit
 
 class MainViewController: UIViewController, Instantiatable {
     typealias Input = Void
@@ -7,7 +7,7 @@ class MainViewController: UIViewController, Instantiatable {
 
     var environment: Environment
 
-    @IBOutlet private weak var containerView: ContainerView!
+    @IBOutlet private var containerView: ContainerView!
 
     private var postsViewContainer: ContainerView.Container<PostsViewController, MainViewController>?
 
@@ -18,7 +18,7 @@ class MainViewController: UIViewController, Instantiatable {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        postsViewContainer = self.containerView.makeContainer(for: PostsViewController.self, parentViewController: self, with: PostsViewController.Input(posts: [], nextPage: 1, isLoading: false))
+        postsViewContainer = containerView.makeContainer(for: PostsViewController.self, parentViewController: self, with: PostsViewController.Input(posts: [], nextPage: 1, isLoading: false))
     }
 
     required init?(coder aDecoder: NSCoder) {

@@ -1,5 +1,5 @@
-import UIKit
 import Mew
+import UIKit
 
 class PostCellViewController: UIViewController, Instantiatable, Injectable {
     typealias Environment = EnvironmentProvider
@@ -18,14 +18,14 @@ class PostCellViewController: UIViewController, Instantiatable, Injectable {
         }
     }
 
-    @IBOutlet private weak var titleLabel: UILabel!
-    @IBOutlet private weak var userNameLabel: UILabel!
-    @IBOutlet private weak var userIconImageView: UserIconImageView!
-    @IBOutlet private weak var createdDateLabel: UILabel!
+    @IBOutlet private var titleLabel: UILabel!
+    @IBOutlet private var userNameLabel: UILabel!
+    @IBOutlet private var userIconImageView: UserIconImageView!
+    @IBOutlet private var createdDateLabel: UILabel!
 
     required init(with input: Input, environment: Environment) {
         self.environment = environment
-        self.model = input
+        model = input
         super.init(nibName: nil, bundle: nil)
     }
 

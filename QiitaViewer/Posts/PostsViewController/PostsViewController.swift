@@ -1,5 +1,5 @@
-import UIKit
 import Mew
+import UIKit
 
 class PostsViewController: UIViewController, Instantiatable, Injectable, UITableViewDelegate, UITableViewDataSource {
     typealias Input = PostsViewModel.Model
@@ -9,13 +9,15 @@ class PostsViewController: UIViewController, Instantiatable, Injectable, UITable
     private var viewModel: PostsViewModel!
     private var posts: [PostEntity] {
         didSet {
-            if posts.elementsEqual(oldValue, by: { l, r -> Bool in
-                return l.id == r.id
+            if posts.elementsEqual(
+                oldValue, by: { l, r -> Bool in
+                    l.id == r.id
             }) {
                 tableView.reloadData()
             }
         }
     }
+
     private var isLoading: Bool {
         didSet {
             if isLoading != oldValue {
@@ -24,14 +26,14 @@ class PostsViewController: UIViewController, Instantiatable, Injectable, UITable
         }
     }
 
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet var tableView: UITableView!
 
     required init(with input: Input, environment: Environment) {
         self.environment = environment
-        self.posts = input.posts
-        self.isLoading = input.isLoading
+        posts = input.posts
+        isLoading = input.isLoading
         super.init(nibName: nil, bundle: nil)
-        self.viewModel = PostsViewModel(view: self, input: input, environment: environment)
+        viewModel = PostsViewModel(view: self, input: input, environment: environment)
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -88,8 +90,7 @@ class PostsViewController: UIViewController, Instantiatable, Injectable, UITable
                     title: post.title,
                     userName: post.user.id,
                     userIconImageURL: post.user.profileImageURL,
-                    createdDateAgo: post.createdDate.timeAgoDisplay()
-                ),
+                    createdDateAgo: post.createdDate.timeAgoDisplay()),
                 parentViewController: self)
         } else {
             return TableViewCell<LoadingCellViewController>.dequeued(
@@ -100,7 +101,7 @@ class PostsViewController: UIViewController, Instantiatable, Injectable, UITable
         }
     }
 
-    // MARK - UIScrollViewDelegate
+    // MARK: - UIScrollViewDelegate
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if scrollView.contentOffset.y > (scrollView.contentSize.height - scrollView.frame.size.height) {

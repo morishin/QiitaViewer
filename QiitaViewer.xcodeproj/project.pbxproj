@@ -106,13 +106,13 @@
 		5B3FA82321919F5900C45F6D /* QiitaViewer */ = {
 			isa = PBXGroup;
 			children = (
-				5B54BFA42195345200A1FEA7 /* Utility */,
 				5B3FA82421919F5900C45F6D /* AppDelegate.swift */,
 				5BC5550B2193DAA900416F7E /* API Request */,
 				5B6500432193D1FF007D55F1 /* Entity */,
 				5B65003E2193CE94007D55F1 /* Environment */,
 				5B6500362193C9CF007D55F1 /* Main */,
 				5BC5550E21941D2700416F7E /* Posts */,
+				5B54BFA42195345200A1FEA7 /* Utility */,
 				5B3FA82B21919F5A00C45F6D /* Assets.xcassets */,
 				5B3FA82D21919F5A00C45F6D /* LaunchScreen.storyboard */,
 				5B3FA83021919F5A00C45F6D /* Info.plist */,
@@ -167,15 +167,39 @@
 			isa = PBXGroup;
 			children = (
 				5BC555252194796800416F7E /* PostsViewModel.swift */,
-				5BC5550F21941D4400416F7E /* PostsViewController.swift */,
-				5BC5551021941D4400416F7E /* PostsViewController.xib */,
-				5BC55513219420DC00416F7E /* PostCellViewController.swift */,
-				5BC55514219420DC00416F7E /* PostCellViewController.xib */,
-				5B54BFA72195382100A1FEA7 /* LoadingCellViewController.swift */,
-				5B54BFA82195382100A1FEA7 /* LoadingCellViewController.xib */,
+				5BE5B0A92195455A00C86F77 /* PostsViewController */,
+				5BE5B0AA2195456600C86F77 /* PostCellViewController */,
+				5BE5B0AB2195457200C86F77 /* LoadingCellViewController */,
 				5BC555192194234A00416F7E /* UserIconImageView.swift */,
 			);
 			path = Posts;
+			sourceTree = "<group>";
+		};
+		5BE5B0A92195455A00C86F77 /* PostsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5BC5550F21941D4400416F7E /* PostsViewController.swift */,
+				5BC5551021941D4400416F7E /* PostsViewController.xib */,
+			);
+			path = PostsViewController;
+			sourceTree = "<group>";
+		};
+		5BE5B0AA2195456600C86F77 /* PostCellViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5BC55513219420DC00416F7E /* PostCellViewController.swift */,
+				5BC55514219420DC00416F7E /* PostCellViewController.xib */,
+			);
+			path = PostCellViewController;
+			sourceTree = "<group>";
+		};
+		5BE5B0AB2195457200C86F77 /* LoadingCellViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5B54BFA72195382100A1FEA7 /* LoadingCellViewController.swift */,
+				5B54BFA82195382100A1FEA7 /* LoadingCellViewController.xib */,
+			);
+			path = LoadingCellViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -1,5 +1,5 @@
-import UIKit
 import Nuke
+import UIKit
 
 @IBDesignable class UserIconImageView: UIImageView {
     @IBInspectable var cornerRadius: CGFloat {
